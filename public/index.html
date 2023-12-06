@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <title>css grid</title>
+</head>
+<body>
+  <div class="container">
+    <nav> 
+      <nav class="navigation">
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#Experience">Experience</a>
+        <a href="#contact">Reach me</a>
+      </nav>
+      <button class="hamburger">
+        <div class="icon"></div>
+      </button>
+      <nav class="mob_navigation">
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#Experience">Experience</a>
+        <a href="#contact">Reach me</a>
+      </nav>
+    </nav>
+    <main class="info"> 
+      <img src="myimage.png" alt="" id="myimg">
+      <h2>Sai Rathnam Chappidi</h2> 
+    </main>
+    <div id="sidebar">
+      <section class="sidebar-section skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Javascript</li>
+          <li>Java</li>
+        </ul>
+      </section>
+      <section class="sidebar-section blogs">
+        <h2>Blogs</h2>
+        <ol>
+          <li>xyz</li>
+          <li>abc</li>
+          <li>xyz</li>
+          <li>abc</li>
+        </ol>
+      </section>
+      <section class="sidebar-section languages">
+        <h2>Languages</h2>
+        <ol type="i">
+          <li>English</li>
+          <li>Hindi</li>
+        </ol>
+      </section>
+      <section class="sidebar-section hobbies">
+        <h2>Hobbies</h2>
+        <ol type="a">
+          <li>xyz</li>
+          <li>abc</li>
+          <li>xyz</li>
+          <li>abc</li>
+        </ol>
+      </section>
+      <section class="sidebar-section contact" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:schap5@unh.newhaven.edu">schap5@unh.newhaven.edu</a></p>
+        <p>Phone: +1 (123) 456-7890</p>
+      </section>
+    </div>      
+    <div id="about">
+      <h2>About me</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus enim placeat, provident sapiente dicta labore ratione ducimus! Nesciunt quos explicabo dicta, animi quam dolorum architecto, est vitae sapiente, accusantium consequatur?</p>
+    </div>
+    <div class="edu_heading">
+      <h2>Education</h2>
+    </div>
+    <div id="education">
+      <img src="unh.jpeg" alt="" id="edu_img">
+            <h3>Master of Science in Computer Science</h3>
+            <p>University Name: University of New Haven<br>
+              Graduation Year: 2024</p>
+    </div>
+    <div id="education1">
+      <img src="jntu.png" alt="" id="edu_img">
+            <h3>Bachelor of Technology in Aeronautical Engg.</h3>
+            <p>University Name: Jawaharlal Nehru Technological University<br>
+              Graduation Year: 2013</p>
+    </div>
+   
+    <div id="projects">
+      <h2>Projects</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus enim placeat, provident sapiente dicta labore ratione ducimus! Nesciunt quos explicabo dicta, animi quam dolorum architecto, est vitae sapiente, accusantium consequatur?</p>
+    </div>
+    <div id="Experience">  
+      <h2>Experience</h2>    
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus enim placeat, provident sapiente dicta labore ratione ducimus! Nesciunt quos explicabo dicta, animi quam dolorum architecto, est vitae sapiente, accusantium consequatur?</p>
+    </div>
+    <div id="volunteer">  
+      <h2>Volunteer Work</h2>    
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus enim placeat, provident sapiente dicta labore ratione ducimus! Nesciunt quos explicabo dicta, animi quam dolorum architecto, est vitae sapiente, accusantium consequatur?</p>
+    </div>
+    <footer> 
+      <div>
+       <img src="whatsapp.png" alt="" id="x"><a href="https://web.whatsapp.com">WhatsApp</a>
+      </div>
+      <div> 
+        <img src="linkedin.png" alt="" id="y"><a href="https://www.linkedin.com">LinkedIn</a>
+      </div>
+      <div><img src="instagram.png" alt="" id="z"><a href="https://www.instagram.com/?hl=en">Instagram</a>
+      </div> 
+    </footer>
+  </div>
+  <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+:root{
+    --main-radius: 10px;
+    --main-padding: 10px;
+}
+
+.container{
+    /*styling*/
+    font-size: 14px ;
+    /*------*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1 fr 1fr 1.8 fr 2 fr 1 fr 1 fr 1 fr 0.1fr;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "sidebar about about"
+    "sidebar edu_heading edu_heading"
+    "sidebar education education1"
+    "sidebar projects projects "
+    "sidebar Experience Experience"
+    "sidebar volunteer volunteer"
+    "footer footer footer"
+}
+
+/*Styling for navigation bar*/
+nav{
+    background-color: #8720E6;
+    grid-area: nav;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    padding: 5px 0;
+}
+
+nav a {
+    color:#EFF1DB;
+    text-decoration: none;
+    margin-right: 40px;
+    display: inline-block; 
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif; 
+}
+
+nav a:hover {
+    background-color: #de93de;
+    color: red;
+    font-family: 'Aclonica';
+}
+
+.hamburger {
+    display: none;
+}
+
+.mob_navigation {
+    display: none;
+}
+
+/*Styling for main section*/
+main{
+    grid-area: main;
+    background: #d8f3dc;
+}
+
+.info{
+    background-color: mistyrose;
+    padding: 20px;
+    text-align: center;
+    color: #0101DF;
+    font-family: 'cursive-font', cursive, sans-serif;
+    font-weight: 900;
+}
+
+#myimg{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/*Styling for sidebar*/
+#sidebar{
+    grid-area: sidebar;
+    background: #E6E6E6;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* Style for each sidebar section */
+.sidebar-section.skills {
+    background-color: #CEECF5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.blogs {
+    background-color: #A9D0F5;
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.languages {
+    background-color: #A9BCF5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.hobbies {
+    background-color: #A9A9F5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+  
+.sidebar-section.contact {
+    background-color: #BCA9F5; 
+    border-radius: var(--main-radius);
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+
+/*Styling for About me section*/
+#about{
+    grid-area: about;
+    background: #F7F8E0;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for education section*/
+.edu_heading{
+    grid-area: edu_heading;
+    background: #F8ECE0;
+    flex-direction: column; 
+    justify-content: center; 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+#education{
+    grid-area: education;
+    background: #F8ECE0;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    
+}
+
+#education1{
+    grid-area: education1;
+    background: #F8ECE0;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+#edu_img {
+    max-width: 100px;
+    max-height: 100px;
+    text-align: center;
+}
+
+/*Styling for projects section*/
+#projects{
+    background-color: #F8E6E0;
+    grid-area: projects;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for experience section*/
+#Experience{
+    background-color: #F8E0E0;
+    grid-area: Experience;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for volunteer section*/
+#volunteer{
+    background-color: #F6D8CE;
+    grid-area: volunteer;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/*Styling for footer section*/
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #8720E6;
+}
+
+footer a {
+    color:#EFF1DB;;
+    text-decoration: none;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+}
+
+footer a:hover {
+    background-color: #f0932b;
+    color: red;
+    font-family: 'Aclonica';
+}
+
+#x{
+    width: 20px;
+    height:20px;
+    padding-right: 10px;
+}
+
+#y{
+    width: 18px;
+    height:18px;
+    padding-right: 10px;
+}
+
+#z{
+    width: 18px;
+    height:18px;
+    padding-right: 10px;
+}
+
+/* mobile layout*/
+@media only screen and (max-width: 500px) {
+    
+    .container {
+        grid-template-columns: 1fr;
+        
+        grid-template-areas:
+            "nav"
+            "main"
+            "about"
+            "edu_heading"
+            "education"
+            "education1"
+            "projects"
+            "Experience"
+            "volunteer"
+            "sidebar"
+            "footer";
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .hamburger{
+        position:relative;
+        display: block;
+        width:35px;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        outline:none;
+        border: none;
+    }
+
+    .hamburger .icon, .hamburger:after, .hamburger::before{
+        content: '';
+        display: block;
+        width:100%;
+        height:5px;
+        background-color: #f6dafe;
+        margin:6px 0px;
+        transition: 0.4s;
+    }
+
+    .hamburger.is-active:before{
+        transform: rotate(-45deg) translate(-8px,6px);
+    }
+
+    .hamburger.is-active:after{
+        transform: rotate(45deg) translate(-9px,-8px);
+    }
+
+    .hamburger.is-active .icon{
+        opacity: 0;
+    }
+
+    .mob_navigation{
+        position: absolute;
+        top: 10%;
+        left: 100%;
+        width: 200px;
+        height: 160px;
+        display:block;
+        z-index: 98;
+        background-color:rgba(253, 7, 151, 0.3);
+        padding: 10px;
+        margin-left: 20px;
+        transition:0.4s;
+        font-size: 20px;
+    }
+
+    .mob_navigation.is-active{
+        left: 0;
+        display: block;
+    }
+
+    .mob_navigation{
+        display: none;
+    }
+
+    .mob_navigation a{
+        display: block;
+        width: 100%;
+        max-width:200px;
+        text-align: center;
+        margin:0 auto 2px;
+        padding: 2px 2px;
+        background-color: none;
+        color:black;
+        text-decoration: none;
+        float: left;
+    } 
+    
+}
+
+
+  </style>
+  <script src="script.js">
+  </script>
+</body>
+</html>
