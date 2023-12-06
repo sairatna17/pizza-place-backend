@@ -92,7 +92,7 @@ const server = http.createServer((req, res) => {
               );
     }
     else{
-        res.end("<h1> 404 nothing is here</h1>");
+        res.end(" 404 nothing is here... ");
     }
 
     /*
@@ -104,7 +104,7 @@ const server = http.createServer((req, res) => {
 
 // it will first try to look for
 // environment variable, if not found then go for 5959
-const PORT= 3001;
+const PORT= 3005;
 
 // port, callback
 server.listen(PORT,()=> console.log(`Great our server is running on port ${PORT} `));

@@ -1,55 +1,5 @@
 [
   {
-    "_id": "656fcf1e7c8f324ad90ffc81",
-    "id": 1,
-    "name": "Margherita",
-    "vegetarian": true,
-    "sizes": [
-      {
-        "size": "Small",
-        "price": 8.99
-      },
-      {
-        "size": "Medium",
-        "price": 12.99
-      },
-      {
-        "size": "Large",
-        "price": 16.99
-      }
-    ],
-    "toppings": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Fresh Basil"
-    ]
-  },
-  {
-    "_id": "656fcf1e7c8f324ad90ffc82",
-    "id": 2,
-    "name": "Pepperoni",
-    "vegetarian": false,
-    "sizes": [
-      {
-        "size": "Small",
-        "price": 10.99
-      },
-      {
-        "size": "Medium",
-        "price": 14.99
-      },
-      {
-        "size": "Large",
-        "price": 18.99
-      }
-    ],
-    "toppings": [
-      "Tomato Sauce",
-      "Mozzarella Cheese",
-      "Pepperoni"
-    ]
-  },
-  {
     "_id": "656fcf1e7c8f324ad90ffc83",
     "id": 3,
     "name": "Vegetarian",
@@ -128,6 +78,56 @@
       "Grilled Chicken",
       "Red Onion",
       "Cilantro"
+    ]
+  },
+  {
+    "_id": "656fcf1e7c8f324ad90ffc81",
+    "id": 1,
+    "name": "Margherita",
+    "vegetarian": true,
+    "sizes": [
+      {
+        "size": "Small",
+        "price": 8.99
+      },
+      {
+        "size": "Medium",
+        "price": 12.99
+      },
+      {
+        "size": "Large",
+        "price": 16.99
+      }
+    ],
+    "toppings": [
+      "Tomato Sauce",
+      "Mozzarella Cheese",
+      "Fresh Basil"
+    ]
+  },
+  {
+    "_id": "656fcf1e7c8f324ad90ffc82",
+    "id": 2,
+    "name": "Pepperoni",
+    "vegetarian": false,
+    "sizes": [
+      {
+        "size": "Small",
+        "price": 10.99
+      },
+      {
+        "size": "Medium",
+        "price": 14.99
+      },
+      {
+        "size": "Large",
+        "price": 18.99
+      }
+    ],
+    "toppings": [
+      "Tomato Sauce",
+      "Mozzarella Cheese",
+      "Pepperoni"
     ]
   }
 ]
